@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Growinc\IpMiddleware;
 
+use Growinc\IpMiddleware\ForbiddenAccessException;
+
 abstract class Middleware
 {
     protected $checkProxyHeaders;
