@@ -1,0 +1,29 @@
+{
+    "name": "growinc/ip-middleware",
+    "description": "Ip Middleware",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Abdul Hafidz Anshari",
+            "email": "aditans88@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.4 | ^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Growinc\\IpMiddleware\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        },
+        "hyperf": {
+            "config": "Growinc\\IpMiddleware\\ConfigProvider"
+        }
+    }
+}
