@@ -16,7 +16,7 @@ class WhitelistMiddleware extends Middleware implements MiddlewareInterface
 
         $whitelist = config('ip-middleware.whitelist');
         
-        if ($this->shouldCheck() 
+        if (! $this->shouldCheck() 
             && ! in_array(
                 $this->determineClientIpAddress($request), 
                 $this->parsePredefinedListItem($whitelist))

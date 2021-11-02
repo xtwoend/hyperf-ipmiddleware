@@ -190,7 +190,7 @@ abstract class Middleware
 
     protected function shouldCheck(): bool
     {
-        return (bool) config('ip-middleware.bypass');
+        return config('ip-middleware.bypass', false);
     }
 
     protected function abort()

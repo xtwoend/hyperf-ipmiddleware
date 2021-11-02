@@ -17,7 +17,7 @@ class BlacklistMiddleware extends Middleware implements MiddlewareInterface
 
         $blacklist = config('ip-middleware.blacklist');
         
-        if ($this->shouldCheck() 
+        if (! $this->shouldCheck() 
             && in_array(
                 $this->determineClientIpAddress($request), 
                 $this->parsePredefinedListItem($blacklist))
