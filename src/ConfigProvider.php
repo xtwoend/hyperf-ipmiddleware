@@ -17,6 +17,11 @@ class ConfigProvider
     public function __invoke(): array
     {
         return [
+            'middlewares' => [
+                'http' => [
+                    \Growinc\IpMiddleware\IpMiddleware::class
+                ]
+            ],
             'publish' => [
                 [
                     'id' => 'config',
