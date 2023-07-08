@@ -116,7 +116,9 @@ abstract class Middleware
         if (is_array($item)) {
             return $item;
         }
-
+        if (is_null($item)) {
+            return [];
+        }
         return explode(',', $item);
     }
 
